@@ -164,8 +164,7 @@ const Cascader = ((document) => {
       event.stopPropagation();
 
       const { target } = event;
-      const root = this.getRoot();
-      const item = findDomByCls(root, target, listItemCls);
+      const item = findDomByCls(this._menuDom, target, listItemCls);
       if (!item) {
         return
       }
