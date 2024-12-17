@@ -40,7 +40,52 @@
     - 如果级联选择框组件已经有 `value` 值，弹出的级联选择菜单应该要展示已经选中的菜单项。
 
   - 当已经弹出级联选择菜单时，鼠标点击级联选择菜单之外的任意地方时，收起级联选择菜单，同时级联选择菜单的显示状态要恢复到刚弹出级联选择菜单时的显示状态。
+  - 下拉菜单的 `option` 配置可以参考下面这个：
 
+```javascript
+const options = [
+  {
+    value: 'zhidaoFE',
+    label: '之道前端',
+    children: [
+      {
+        value: 'shiming',
+        label: '使命',
+      },
+      {
+        value: 'yuanjing',
+        label: '愿景',
+      },
+      {
+        value: 'fuwu',
+        label: '服务',
+        children: [
+          {
+            value: 'cr',
+            label: '原创项目 Code Review',
+          },
+          {
+            value: 'plan',
+            label: '职业发展规划',
+          },
+          {
+            value: 'jianli',
+            label: '简历修改',
+          },
+          {
+            value: 'mianshi',
+            label: '模拟面试',
+          },
+        ]
+      },
+    ],
+  },
+  {
+    value: 'what',
+    label: '之道前端是什么',
+  },
+];
+```
 
 > [在线体验](https://zhidaofe.github.io/P13-cascader-component/s1/index.html)
 
